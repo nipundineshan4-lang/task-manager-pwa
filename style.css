@@ -1,0 +1,71 @@
+:root {
+    --primary: #6750A4; /* Classic Material Purple */
+    --surface: #fef7ff;
+    --on-surface: #1d1b20;
+    --secondary-container: #e8def8;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--surface);
+    color: var(--on-surface);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    font-size: 1.2rem;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.task-card {
+    background: var(--secondary-container);
+    padding: 1rem;
+    border-radius: 16px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.input-area {
+    padding: 1rem;
+    display: flex;
+    gap: 10px;
+    background: var(--surface);
+    border-top: 1px solid #ddd;
+}
+
+input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 28px;
+    border: 1px solid #79747e;
+    outline: none;
+}
+
+.fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--primary);
+    color: white;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
